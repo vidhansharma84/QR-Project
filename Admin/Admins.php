@@ -16,7 +16,28 @@
     <div class="p-10">
       <h1 class="text-3xl font-bold text-gray-800 uppercase">My Admin</h1>
       
-      <div class="flex flex-col">
+      <div class="bg-white p-8 rounded shadow-md mt-5">
+  <h2 class="text-lg font-medium mb-4">Add New Admin</h2>
+  <form>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="email">
+        Email
+      </label>
+      <input class="w-full px-3 py-2 border border-gray-300 rounded" id="email" type="email" name="email" required>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="password">
+        Password
+      </label>
+      <input class="w-full px-3 py-2 border border-gray-300 rounded" id="password" type="password" name="password" required>
+    </div>
+    <div class="flex justify-end">
+      <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" type="submit">Add User</button>
+    </div>
+  </form>
+</div>
+      
+      <div class="flex flex-col mt-5">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
       <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
