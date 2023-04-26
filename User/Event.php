@@ -17,10 +17,21 @@
     <div class="py-4 px-2 border-b border-gray-300">
       <h1 class="text-2xl font-bold">Event</h1>
     </div>
-    <div class="p-4">
+    <!-- Button to open the modal -->
+<button id="open-modal" class="bg-blue-500 mt-5 ml-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none
+ focus:shadow-outline transition duration-200 ease-in-out">Create Event</button>
+
+<!-- The modal overlay and content -->
+<div id="modal" class="fixed inset-0 z-50 overflow-auto bg-gray-900 bg-opacity-50 flex justify-center items-center hidden">
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-1/2 float-right">
+    <div class="px-6 py-4">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+    <button id="close-modal" class="bg-blue-500 
+    hover:bg-blue-700 text-white font-bold py-2 px-4 float-right
+    rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">X</button>
   <div class="px-6 py-4">
     <h1 class="text-2xl font-bold mb-4">Create Event</h1>
+   
     <form>
       <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="title">
@@ -46,15 +57,101 @@
         </label>
         <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" rows="3"></textarea>
       </div>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">
-        Create
-      </button>
-    </form>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="thumbnail">
+          Thumbnail
+        </label>
+        <div class="relative border-dashed border-2 border-gray-400 bg-gray-100 rounded-md py-4 px-4 flex justify-center items-center">
+          <div class="space-y-1 text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38 20c0-5.523-4.477-10-10-10s-10 4.477-10 10v4H16a4 4 0 00-4 4v16a4 4 0 004 4h16a4 4 0 004-4V24a4 4 0 00-4-4h-6v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h6z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24 13a7 7 0 017 7v4H17v-4a7 7 0 017-7z"></path>
+            </svg>
+            <div class="flex text-sm text-gray-600">
+              <label for="file-upload"
+the file</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs text-gray-500">
+PNG, JPG, GIF up to 10MB
+</p>
+</div>
+<input id="file-upload" name="file-upload" type="file" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer">
+</div>
+</div>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">
+Create
+</button>
+</form>
+
   </div>
-  <div class="bg-blue-500 text-white px-4 py-2 text-center text-sm font-semibold uppercase tracking-wider absolute right-0 top-0 transform translate-x-full transition duration-200 ease-in-out hover:translate-x-0">
+  <div class="bg-green-500 text-white px-4 py-2 text-center text-sm font-semibold uppercase tracking-wider absolute right-0 top-0 transform translate-x-full transition duration-200 ease-in-out hover:translate-x-0">
     Event created
   </div>
 </div>
+     
+    </div>
+  </div>
+</div>
+
+    <div class="p-4 mt-5">
+      
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="max-w-md rounded overflow-hidden shadow-lg bg-white">
+    <img class="w-full h-64 object-cover" src="https://source.unsplash.com/random/800x600" alt="Event Image">
+    <div class="px-6 py-4">
+      <h1 class="text-2xl font-bold mb-2">Event Title</h1>
+      <p class="text-gray-700 text-base mb-2">Date: 01/01/2022</p>
+      <p class="text-gray-700 text-base mb-4">Location: New York City</p>
+      <div class="flex justify-between items-center">
+        <span class="text-gray-500 font-semibold">$100</span>
+        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">Register</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-md rounded overflow-hidden shadow-lg bg-white">
+    <img class="w-full h-64 object-cover" src="https://source.unsplash.com/random/800x600" alt="Event Image">
+    <div class="px-6 py-4">
+      <h1 class="text-2xl font-bold mb-2">Event Title</h1>
+      <p class="text-gray-700 text-base mb-2">Date: 01/01/2022</p>
+      <p class="text-gray-700 text-base mb-4">Location: New York City</p>
+      <div class="flex justify-between items-center">
+        <span class="text-gray-500 font-semibold">$100</span>
+        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">Register</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-md rounded overflow-hidden shadow-lg bg-white">
+    <img class="w-full h-64 object-cover" src="https://source.unsplash.com/random/800x600" alt="Event Image">
+    <div class="px-6 py-4">
+      <h1 class="text-2xl font-bold mb-2">Event Title</h1>
+      <p class="text-gray-700 text-base mb-2">Date: 01/01/2022</p>
+      <p class="text-gray-700 text-base mb-4">Location: New York City</p>
+      <div class="flex justify-between items-center">
+        <span class="text-gray-500 font-semibold">$100</span>
+        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">Register</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script >
+  const openModal = document.getElementById('open-modal')
+const closeModal = document.getElementById('close-modal')
+const modal = document.getElementById('modal')
+
+openModal.addEventListener('click', () => {
+  modal.classList.remove('hidden')
+})
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add('hidden')
+})
+
+</script>
+
 
     </div>
   </div>
