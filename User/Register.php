@@ -1,13 +1,14 @@
 <?php 
 session_start();
 $error="";
-if(isset($_SESSION['UNF']))
+if(isset($_SESSION['UAE']))
 {
-    $error="Email Id Or Password Incorrect";
+    $error="Email Id Already Exists";
 }
 
-unset($_SESSION['UNF']);
+unset($_SESSION['UAE']);
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,9 +49,14 @@ unset($_SESSION['UNF']);
             </div>
 
             <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-                <p class="text-center text-3xl">Welcome.</p>
+                <p class="text-center text-3xl">Register Now</p>
                 <h6 class="text-center text-2xl font-bold text-red-600"><?php echo $error;?></h6>
-                <form action="../Backend/backend.php" method="post" class="flex flex-col pt-3 md:pt-8" >
+                <form action="../Backend/backend.php" method="post" class="flex flex-col pt-3 md:pt-8">
+                <div class="flex flex-col pt-4">
+                        <label for="email" class="text-lg">Name</label>
+                        <input type="text" id="email" name="name" placeholder="Enter Your Name" class="shadow appearance-none
+                         border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
                     <div class="flex flex-col pt-4">
                         <label for="email" class="text-lg">Email</label>
                         <input type="email" id="email" name="email" placeholder="your@email.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
@@ -58,13 +64,13 @@ unset($_SESSION['UNF']);
     
                     <div class="flex flex-col pt-4">
                         <label for="password" class="text-lg">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                        <input type="password" id="password" placeholder="Password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
     
-                    <input type="submit" value="Log In" name="user-login" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">
+                    <input type="submit" value="Sign Up"  name="user-register" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">
                 </form>
                 <div class="text-center pt-12 pb-12">
-                    <p>Don't have an account? <a href="Register.php" class="underline font-semibold">Register here.</a></p>
+                    <p>Already have an account? <a href="index.php" class="underline font-semibold">Login here.</a></p>
                 </div>
             </div>
 

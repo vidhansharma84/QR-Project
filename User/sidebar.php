@@ -50,6 +50,18 @@
 <span class="ml-4 font-medium">Ticket's</span>
 </a>
 </li>
+
+<li class="my-px">
+          <a href="Logout.php" class="flex flex-row items-center h-12 px-3 rounded-lg text-gray-400 hover:bg-gray-800">
+            <span class="flex items-center justify-center text-lg text-gray-300">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M13 18a1 1 0 01-.87-.5L9.26 12l-3.82 5.5A1 1 0 014 18H3a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v14a1 1 0 01-.5.87l-4 2a1 1 0 01-.13.06zM12 9a1 1 0 110 2 1 1 0 010-2zm0-3a1 1 0 110 2 1 1 0 010-2zm-2 9a1 1 0 110-2 1 1 0 010 2zm-2-3a1 1 0 110-2 1 1 0 010 2z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span class="ml-4 font-medium">Logout</span>
+          </a>
+        </li>
+
 </ul>
 </div>
 
