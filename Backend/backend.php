@@ -65,19 +65,21 @@ if(isset($_POST['event-create']))
     $date = $_POST['date'];
     $time = $_POST['time'];
     $about=$_POST['about'];
+    $location = $_POST['location'];
+    $amount = $_POST['amount'];
     $fa=$_FILES['file'];
 		   $filenames=$fa['name'];
 		   $filepaths=$fa['tmp_name'];
 		   $destfiles='../asset/upload/'.$filenames;
 		   move_uploaded_file($filepaths,$destfiles);
 
-           $sql="INSERT INTO event(UID,Title,Date,Time,About,Pic)values('$id','$title','$date','$time','$about','$destfiles')";
+           $sql="INSERT INTO event(UID,Title,Date,Time,About,Pic,Amount,Location)values('$id','$title','$date','$time','$about','$destfiles','$amount','$location')";
            $result=mysqli_query($conn,$sql);
            if($result==true)
            {
-            echo "done ";
+           header('Location:../User/Event.php');
            }else{
-            echo "soemting went wrong";
+            header('Location:../User/Event.php');
            }
 
 

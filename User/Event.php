@@ -52,6 +52,18 @@
         <input name="time" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="time" type="time">
       </div>
       <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="title">
+          Amount
+        </label>
+        <input name="amount" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="number" placeholder="Enter Amount">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="title">
+          Location
+        </label>
+        <input name="location" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Enter Location">
+      </div>
+      <div class="mb-4">
         <label class="block text-gray-700 font-bold mb-2" for="description">
           Description
         </label>
@@ -68,8 +80,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24 13a7 7 0 017 7v4H17v-4a7 7 0 017-7z"></path>
             </svg>
             <div class="flex text-sm text-gray-600">
-              <label for="file-upload"
-the file</label>
+              <label for="file-upload" >the file</label>
 <p class="pl-1">or drag and drop</p>
 </div>
 <p class="text-xs text-gray-500">
@@ -95,7 +106,8 @@ Create
 </div>
 
     <div class="p-4 mt-5">
-      <?php 
+      
+    <?php 
       $sql="SELECT * from event where UID='$id'";
       $result=mysqli_query($conn,$sql);
       $present=mysqli_num_rows($result);
@@ -107,16 +119,16 @@ Create
       
       ?>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="flex w-full pl-5">
   <div class="max-w-md rounded overflow-hidden shadow-lg bg-white">
-    <img class="w-full h-64 object-cover" src="https://source.unsplash.com/random/800x600" alt="Event Image">
+    <img class="w-372 h-64 object-cover" src="<?php echo $row['Pic'];?>" alt="Event Image">
     <div class="px-6 py-4">
       <h1 class="text-2xl font-bold mb-2"><?php echo $row['Title'];?></h1>
       <p class="text-gray-700 text-base mb-2">Date: <?php echo $row['Date'];?></p>
-      <p class="text-gray-700 text-base mb-4">Location: New York City</p>
+      <p class="text-gray-700 text-base mb-4">Location: <?php echo $row['Location'];?></p>
       <div class="flex justify-between items-center">
-        <span class="text-gray-500 font-semibold">$100</span>
-        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">Register</a>
+        <span class="text-gray-500 font-semibold"><?php echo $row['Amount'];?></span>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out">View</button>
       </div>
     </div>
   </div>

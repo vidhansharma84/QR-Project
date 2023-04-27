@@ -77,16 +77,16 @@
                   <div class="ml-4">
                     <div
                     "class="text-sm font-medium text-gray-900">
-Jane Doe
+Shreya
 </div>
 <div class="text-sm text-gray-500">
-janedoe@example.com
+shreya@example.com
 </div>
 </div>
 </div>
 </td>
 <td class="px-4 py-2 whitespace-nowrap">
-<div class="text-sm text-gray-900">janedoe@example.com</div>
+<div class="text-sm text-gray-900">shreya@example.com</div>
 </td>
 <td class="px-4 py-2 whitespace-nowrap">
 <div class="text-sm text-gray-900">2022-04-21 14:06:12</div>
@@ -105,7 +105,7 @@ janedoe@example.com
   </div>
 </div><script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 <script>
-  const labels = ["John Doe", "Jane Doe", "Bob Smith", "Alice Johnson", "Emily Brown", "David Lee", "Karen Davis"];
+  const labels = ["puneet kumar", "vishal sharma", "surya mishra", "manish sharma", "mayank gupta", "yashkant rai", "dev kumar"];
   const data = {
     labels: labels,
     datasets: [{
