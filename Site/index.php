@@ -38,14 +38,17 @@
       ?>
 			<div class="bg-white rounded-lg shadow-md overflow-hidden">
 				<div class="bg-gray-200 h-64 md:h-64 w-full flex items-center justify-center">
-					<img src="<?php echo $row['Pic'];?>" class="img-responsive w-full h-64"/>>
+					<img src="<?php echo $row['Pic'];?>" class="img-responsive w-full h-64"/>
 				</div>
 				<div class="p-4">
 					<h3 class="text-lg font-bold mb-2"><?php echo $row['Title'];?></h3>
 					<p class="text-gray-700 mb-4"><?php echo $row['About'];?></p>
                     <p class="text-gray-700 mb-4">Location:-<?php echo $row['Location'];?></p>
                     <p class="text-gray-700 mb-4">Amount:- ₹<?php echo $row['Amount'];?></p>
-					<a href="#" class="inline-block bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600 transition-colors duration-300"></a>
+                    <form method="post" action="checkout.php">
+					<button type="submit"class="inline-block bg-blue-500 text-white px-3 py-2 rounded 
+                    hover:bg-blue-600 transition-colors duration-300">Buy</a>
+                    </form>
 				</div>
 			</div>
 
