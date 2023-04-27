@@ -1,5 +1,7 @@
 <?php 
-
+session_start();
+include('../Backend/config.php');
+$id=$_SESSION['UID'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -55,4 +55,32 @@ if(isset($_POST['user-register']))
     }
 }
 
+
+
+//event form submit codes
+if(isset($_POST['event-create']))
+{
+    $id=$_SESSION['UID'];
+    $title = $_POST['title'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $about=$_POST['about'];
+    $fa=$_FILES['file'];
+		   $filenames=$fa['name'];
+		   $filepaths=$fa['tmp_name'];
+		   $destfiles='../asset/upload/'.$filenames;
+		   move_uploaded_file($filepaths,$destfiles);
+
+           $sql="INSERT INTO event(UID,Title,Date,Time,About,Pic)values('$id','$title','$date','$time','$about','$destfiles')";
+           $result=mysqli_query($conn,$sql);
+           if($result==true)
+           {
+            echo "done ";
+           }else{
+            echo "soemting went wrong";
+           }
+
+
+}
+
 ?>
