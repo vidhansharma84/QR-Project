@@ -46,8 +46,8 @@
                     <p class="text-gray-700 mb-4">Location:-<?php echo $row['Location'];?></p>
                     <p class="text-gray-700 mb-4">Amount:- ₹<?php echo $row['Amount'];?></p>
                     <form method="post" action="checkout.php">
-					<button type="submit"class="inline-block bg-blue-500 text-white px-3 py-2 rounded 
-                    hover:bg-blue-600 transition-colors duration-300">Buy</a>
+					<a class="inline-block bg-blue-500 text-white px-3 py-2 rounded 
+                    hover:bg-blue-600 transition-colors duration-300"><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Lik7b0kU6SGcZY" async> </script> </form></a>
                     </form>
 				</div>
 			</div>
